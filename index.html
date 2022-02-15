@@ -1,66 +1,120 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Caesar's chipher A codificação utilizando a Cifra de César</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>
-    &lt; Caesar's chipher &gt; A codificação ultilizando a Cifra de César &lt; Caesar's cipher &gt; 
-  </title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <body>
+    <div class="box">
+      <header class="row header">
+        <a class="github-logo" href="https://github.com/DevFranci"
+          ><img src="img/github-square-brands.png"
+        /></a>
 
-<body>
-  <div class="texto-branco" id="border">
-    <h1> Caesar's cipher </h1>
-    <h2>A codificação ultilizando a Cifra de César</h2>
-    <p>Uma maneira <strong>fácil e discreta</strong> de mandar suas mensagens secretas para qualquer pessoa!</p>
-  </div>
+        <section class="texto-branco" id="border">
+          <div>
+            <h1>Caesar's cipher</h1>
+            <h2>A codificação utilizando a Cifra de César</h2>
+            <p>
+              Uma maneira fácil e discreta de mandar suas mensagens secretas
+              para qualquer pessoa!
+            </p>
+          </div>
+        </section>
+      </header>
+      <main class="row content">
+        <aside class="how-to">
+          <h2>História da Cifra de César</h2>
 
-  <div id="how-to">
-    <h2>Como funciona?</h2>
+          <p>
+            Júlio César, imperador romano de 100 a.C. a 44 a.C., utilizava um
+            código para proteger as mensagens enviadas a seus generais. Assim,
+            se a mensagem caísse em mãos inimigas, a informação não poderia ser
+            compreendida. Cada letra do alfabeto era substituída pela letra três
+            posições à frente, ou seja, o “A” era substituído pelo “D”, o “B”
+            pelo “E”, o “C” pelo “F”, e assim sucessivamente. Qualquer código
+            que tenha esse padrão é considerado uma Cifra de César, também
+            conhecida como Código de César.
+          </p>
 
-    <h3> &gt; Para enviar mensagem codificada &lt;</h3>
-    <p>No campo Codificar digite a sua mensagem. Depois, no campo chave
-      digite um número de sua preferência.
-      Agora é só mandar sua mensagem codificada e segura.
-      Não se esqueça de informar ao destinatário, a chave que você usou pois só com ela, ele poderá decifrar a
-      mensagem!!!
-    </p>
+          <h3>Como funciona?</h3>
 
-    <h3> Para ler uma mensagem codificada </h3>
-    <p>Insira a mensagem no campo Decodificar e no campo
-      "chave" o número informado pelo seu rementente!
-    </p>
+          <h3>Para enviar mensagem codificada</h3>
+          <p>
+            No campo Codificar digite a sua mensagem. Depois, no campo chave
+            digite um número de sua preferência. Agora é só mandar sua mensagem
+            codificada e segura para quem e aonde quiser. Não se esqueça de
+            informar ao destinatário, a chave que você usou pois só com ela, ele
+            poderá decifrar a mensagem!
+          </p>
 
-  </div>
+          <h4>Para ler uma mensagem codificada</h4>
+          <p>
+            Insira a mensagem no campo Decodificar e no campo "chave" o número
+            informado pelo seu remetente!
+          </p>
+        </aside>
+        <aside class="cipher-panel">
+          <section>
+            <h4 class="texto-branco">Codificar</h4>
+            <div>
+              <textarea
+                id="userInput"
+                rows="8"
+                cols="40"
+                placeholder="Digite a sua mensagem aqui!"
+              ></textarea>
+            </div>
+            <div>
+              <input
+                placeholder="Chave:"
+                type="number"
+                class="inputNumber"
+                id="key"
+              />
+            </div>
 
-  <h3 class="texto-branco"> &lt; Codificar &gt; </h3>
-  <textarea id="userInput" rows="5" cols="33" placeholder="Digite a sua mensagem aqui! =D"></textarea>
-  <p>Chave:</p> <input type="number" class="inputNumber" id="key">
-  <button class="button" onclick="getText()">Codificar</button>
-  <button class="button" onclick="limparElementoCodificar()">Limpar</button>
+            <div class="button-group">
+              <button class="button" onclick="getText()">Codificar</button>
+              <button class="button" onclick="clearEncode()">Limpar</button>
+            </div>
+          </section>
+          <section>
+            <h4 class="texto-branco">Decodificar</h4>
+            <div>
+              <textarea
+                id="userInputD"
+                rows="8"
+                cols="40"
+                placeholder="Digite a sua mensagem aqui!"
+              ></textarea>
+            </div>
+            <div>
+              <input
+                placeholder="Chave:"
+                type="number"
+                class="inputNumber"
+                id="keyD"
+              />
+            </div>
 
-
-  <h3 class="texto-branco"> &lt; Decodificar &gt; </h3>
-  <textarea id="userInputD" rows="5" cols="33" placeholder="Lqoqbm i aci umvaiomu iycq! =L"></textarea>
-  <p>Chave:</p> <input type="number" class="inputNumber" id="keyD">
-  <button class="button" onclick="getText2()">Decodificar</button>
-  <button class="button" onclick="limparElementoDecodificar()">Limpar</button>
-
-  <p>
-    <a href="http://clubedosgeeks.com.br/sem-categoria/cifra-de-cesar-criptografia-monoalfabetica" target="_blank">Saiba
-      Mais Sobre o Processo de Cifragem</a>
-  </p>
-
-
-  <footer>
-    <p class="texto-branco"><b> Criado por Franciele Mesquita - Primeiro projeto Laboratória 2022 </b></p>
-  </footer>
-
-  <script type="module" src="index.js"></script>
-
-
-</body>
-
+            <div class="button-group">
+              <button class="button" onclick="getText2()">Decodificar</button>
+              <button class="button" onclick="clearDecode()">Limpar</button>
+            </div>
+          </section>
+        </aside>
+      </main>
+      <footer class="row footer">
+        <p class="copyright texto-branco">
+          &copy; Criado por Franciele Mesquita - Primeiro projeto Laboratória
+          2022
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
