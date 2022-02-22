@@ -10,7 +10,10 @@
   <body>
     <div class="box">
       <header class="row header">
-        <a class="github-logo" href="https://github.com/DevFranci"
+        <a
+          id="github-header"
+          class="github-logo"
+          href="https://github.com/DevFranci"
           ><img src="img/github-square-brands.png"
         /></a>
 
@@ -62,7 +65,7 @@
           </p>
         </aside>
         <aside class="cipher-panel">
-          <section>
+          <section class="form-group">
             <h4 class="texto-branco">Codificar</h4>
             <div>
               <textarea
@@ -82,11 +85,11 @@
             </div>
 
             <div class="button-group">
-              <button class="button" onclick="getText()">Codificar</button>
-              <button class="button" onclick="clearEncode()">Limpar</button>
+              <button id="btnEncode" class="button">Codificar</button>
+              <button id="btnClearEncode" class="button">Limpar</button>
             </div>
           </section>
-          <section>
+          <section class="form-group">
             <h4 class="texto-branco">Decodificar</h4>
             <div>
               <textarea
@@ -106,11 +109,17 @@
             </div>
 
             <div class="button-group">
-              <button class="button" onclick="getText2()">Decodificar</button>
-              <button class="button" onclick="clearDecode()">Limpar</button>
+              <button id="btnDecode" class="button">Decodificar</button>
+              <button id="btnClearDecode" class="button">Limpar</button>
             </div>
           </section>
         </aside>
+        <a
+          id="github-mobile"
+          class="github-logo"
+          href="https://github.com/DevFranci"
+          ><img src="img/github-square-brands.png"
+        /></a>
       </main>
       <footer class="row footer">
         <p class="copyright texto-branco">

@@ -1,46 +1,51 @@
 import cipher from "./cipher.js";
 
-document.getText = () => {
-  let inputOffset = document.getElementById("key");
-  let stringOffset = inputOffset.value;
-  const offset = parseInt(stringOffset);
+window.addEventListener("load", () => {
+  const inputOffset = document.getElementById("key");
+  const message = document.getElementById("userInput");
+  const inputOffsetD = document.getElementById("keyD");
+  const messageD = document.getElementById("userInputD");
+  const btnEncode = document.getElementById("btnEncode");
+  const btnClearEncode = document.getElementById("btnClearEncode");
+  const btnDecode = document.getElementById("btnDecode");
+  const btnClearDecode = document.getElementById("btnClearDecode");
 
-  if (isNaN(offset)) {
-    alert("O deslocamento deve ser apenas números");
-    return;
-  }
+  btnEncode.addEventListener("click", () => {
+    const offset = parseInt(inputOffset.value);
 
-  let message = document.getElementById("userInput");
-  const final = cipher.encode(offset, message.value);
-  message.value = final;
-  message.select();
-  message = document.execCommand("copy");
-};
+    if (isNaN(offset)) {
+      alert("O deslocamento deve ser apenas números");
+      return;
+    }
 
-document.getText2 = () => {
-  const offset = parseInt(document.getElementById("keyD").value);
-  if (isNaN(offset)) {
-    alert("O deslocamento deve ser apenas números");
-    return;
-  }
-  let message = document.getElementById("userInputD");
-  const final = cipher.decode(offset, message.value);
+    const final = cipher.encode(offset, message.value);
+    message.value = final;
+    message.select();
+    document.execCommand("copy");
+  });
 
-  message.value = final;
-  message.select();
-  message = document.execCommand("copy");
-};
+  btnClearEncode.addEventListener("click", () => {
+    inputOffset.value = "";
+    message.value = "";
+  });
 
-document.clearEncode = () => {
-  var key = document.getElementById("key");
-  var userInput = document.getElementById("userInput");
-  key.value = "";
-  userInput.value = "";
-};
+  btnDecode.addEventListener("click", () => {
+    const offset = parseInt(inputOffsetD.value);
 
-document.clearDecode = () => {
-  var keyD = document.getElementById("keyD");
-  var userInputD = document.getElementById("userInputD");
-  keyD.value = "";
-  userInputD.value = "";
-};
+    if (isNaN(offset)) {
+      alert("O deslocamento deve ser apenas números");
+      return;
+    }
+
+    const final = cipher.decode(offset, messageD.value);
+
+    messageD.value = final;
+    messageD.select();
+    document.execCommand("copy");
+  });
+
+  btnClearDecode.addEventListener("click", () => {
+    inputOffsetD.value = "";
+    messageD.value = "";
+  });
+});
