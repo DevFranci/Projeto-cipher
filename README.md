@@ -4,10 +4,12 @@
 ## Índice
 
     1. Prefácio
-    2. Projeto
-    3. Funcionalidades
-    4. UX História do usuário
-    5. Considerações finais
+    2. Protótipo de baixa fidelidade
+    3. Projeto
+    4. Funcionalidades
+    5. UX História do usuário
+    6. Considerações finais
+
 
 ## 1. Prefácio
 
@@ -19,31 +21,42 @@ Cada letra do alfabeto era substituída pela letra três posições à frente, o
 Qualquer código que tenha esse padrão é considerado uma Cifra de César, também conhecida como Código de César.
 
 
-![julioC](https://user-images.githubusercontent.com/97745793/155097352-1e2df252-3dfe-4eef-a329-2296f04be1b5.jpg)
+![julioC](https://user-images.githubusercontent.com/97745793/155097352-1e2df252-3dfe-4eef-a329-2296f04be1b5.jpg) ![cesaralf](https://user-images.githubusercontent.com/97745793/155630090-1d494635-be7e-4e51-843c-5712a1862630.jpeg)
 
-## 2. Projeto
+
+
+## 2. Protótipo de baixa fidelidade
+
+![Protótipo1](https://user-images.githubusercontent.com/97745793/155628340-bb1449e6-c8db-4643-960f-5f925208bdeb.jpg)
+
+
+## 3. Projeto
 
 O projeto tem como objetivo ser uma página web que ajuda os usuários que precisam de sigilo em suas mensagens, o usuário escolhe uma chave de deslocamento e digita sua mensagem.
 Assim que a mensagem for criptografada ele pode copiar e enviar para qualquer pessoa em uma ou mais redes de comunicação de sua escolha.
 O usuário deve guardar a chave de deslocamento para que a pessoa que ele enviou a mensangem criptografada possa descriptografa-la.
 Além de ser um jeito seguro de enviar mensagens é também muito fácil de entender a lógica da cifra lendo o texto breve que deixei no conteúdo de informação da página.
 
-## 3. Funcionalidade
+## 4. Funcionalidade
 
 ### Como funciona?
 
-Para enviar mensagem codificada:
+Para o usuário uma enviar mensagem codificada:
 
-No campo Codificar digite a sua mensagem. Depois, no campo chave escolha algum número.
-Agora é só mandar sua mensagem codificada e segura para quem e aonde quiser.
+No campo Codificar ele vai digitar a sua mensagem. Depois, no campo chave o usuário deve escolher algum número como chave de deslocamento.
+Por fim o usuário já pode mandar sua mensagem codificada e segura para quem e aonde ele quiser.
 
-Para ler uma mensagem codificada:
+![Captura de tela de 2022-02-24 21-09-16](https://user-images.githubusercontent.com/97745793/155631101-96831404-a972-41bc-9d5e-aa1f8853684a.png)
 
-Insira a mensagem no campo Decodificar usando o Ctrl+v do seu teclado,
+Para o usuário ler uma mensagem codificada:
+
+Ele deve iserir a mensagem no campo Decodificar usando o Ctrl+v do seu teclado,
 em seguida no campo "chave" o número informado pelo seu remetente!
-Não se esqueça de informar ao destinatário, a chave que você usou pois só com ela, ele poderá decifrar a mensagem!
 
-## 4.  UX História do usuário
+![Captura de tela de 2022-02-24 21-09-21](https://user-images.githubusercontent.com/97745793/155631123-f63ddda2-e616-44f0-a7af-705529cc2b27.png)
+
+
+## 5.  UX História do usuário
 
 Para criar esta página não denominei um tipo padrão de usuário, pensei em uma forma que qualquer pessoa
 pudesse utilizar e entender o que é o processo de cifragem de Júlio César.
@@ -52,7 +65,7 @@ possa ler as instruções e ao mesmo tempo cifre a mensagem de sua preferencia.
 E além de ver que sua mensagem estará segura para envio, ele poderá também conhecer uma parte da historia
 de Júlio César!
 
-## 5.  Considerações finais
+## 6.  Considerações finais
 
 Este é meu primeiro projeto na Laboratória, em que pude praticar os principios da lógica de programação ultilizando:
 
